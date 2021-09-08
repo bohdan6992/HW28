@@ -162,8 +162,7 @@ span {
 }
 .container-6 {
   grid-area: C6;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   padding: 2px;
   grid-gap: 4px;
   border: 2px solid black;
