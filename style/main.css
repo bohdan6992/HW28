@@ -34,6 +34,7 @@
 
 .container-2 div {
   background-color: grey;
+  height: 418px;
 }
 
 .container-3 {
@@ -173,6 +174,7 @@ span {
   font-size: 40px;
   font-family: "GoogleSans";
   display: flex;
+  padding: 0 224px;
   align-items: center;
   justify-content: center;
   color: #fff;
@@ -188,12 +190,7 @@ span {
   border: 2px solid black;
 }
 
-.box-1 {
-  margin: 0 auto;
-}
-
 .box-1 img {
-  margin: 0 auto;
   height: 300px;
   width: 300px;
 }
@@ -211,33 +208,34 @@ span {
   font-family: "GoogleSans";
   color: #fff;
   font-weight: 600;
+  padding: 20px;
 }
 
 .box-3 {
   background-color: #4400ff;
   grid-area: C;
-  height: 600px;
+  height: 500px;
   width: 100px;
 }
 
 .box-4 {
   background-color: #c8ff00;
   grid-area: D;
-  height: 600px;
+  height: 500px;
   width: 100px;
 }
 
 .box-5 {
   background-color: #ff6600;
   grid-area: E;
-  height: 600px;
+  height: 500px;
   width: 100px;
 }
 
 .box-6 {
   background-color: #00ccff;
   grid-area: F;
-  height: 600px;
+  height: 500px;
   width: 100px;
 }
 
