@@ -1,15 +1,42 @@
-let a=10
-let c=4
-let d=8
-// a+x*c*2-d=0
-let x=(-a+d)/(c*2)
-console.log('Value of X:', x)
+// //_________#1________
+// let a = prompt ('Введите первое число', '');
+// let b = prompt ('Введите второе число', '');
+// let x = a-b;
+// if (x>0){
+//   alert(`Разница между числами составляет: ${x}. Первое число больше`);
+// }else if (x<0){
+//   alert(`Разница между числами составляет: ${x}. Второе число больше`);
+// }else{
+//   alert(`Разница между числами составляет: ${x}. Числа равны`);
+// }
 
-// ___________________________
-let plotArea=400;
-let plotSideLenght = Math.sqrt(plotArea);
-let sidesNumber =4;
-let plotsNumber=4
-let companibleFencesNumber=3
-let fenceLenght= (plotSideLenght*sidesNumber*plotsNumber)-(companibleFencesNumber*plotSideLenght);
-console.log('Fence lenght:', fenceLenght);
+
+// //_________#2________
+// let depositAmount = prompt ('Введите сумму вклада (грн)', '');
+// let annualRate = prompt ('Введите сумму годовой ставки (%)', '');
+// let annualIncome = depositAmount/100*annualRate;
+// let semiannualIncome = annualIncome/2;
+// alert(`Доход по депозитному вкладу за 6 месяцев: ${semiannualIncome} гривен`);
+//С точки зрения математики - это не правильно. По-правильному было бы высчитать ежемесячную прибыль в процентах, потом от оклада каждый месяц отсчитывать процент и прибавлять к тому же окладу, а в следующем месяце считать процент от получившейся суммы, соответственно прибыль через пол года будет не такая. Но для этого нужно, либо запускать цикл шагом в количество месяцев, но т.к. мы этого ещё не коснулись я не делал, либо создавать новую переменную для прибыли в каждом месяце, но это зашквар)
+
+
+// //_________#3________
+// let a = prompt ('Введите первое число', '');
+// let b = prompt ('Введите второе число', '');
+// a>b?(
+//   alert('Первое число больше')
+// ):a<b?(
+//   alert('Второе число больше')
+// ):(
+//   alert('Числа равны')
+// )
+
+
+// //_________#4________
+// let plotArea = prompt ('Введите площадь участка', '');
+// let plotSideLenght = Math.sqrt(plotArea);
+// let plotsNumber = prompt ('Введите количество участков', '');
+// let companibleFencesNumber = --plotsNumber;
+// let sidesNumber =4;
+// let fenceLenght= (plotSideLenght*sidesNumber*plotsNumber)-(companibleFencesNumber*plotSideLenght);
+// alert(`Длина забора равна - ${fenceLenght}`);
