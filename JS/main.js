@@ -36,7 +36,7 @@
 // let plotArea = prompt ('Введите площадь участка', '');
 // let plotSideLenght = Math.sqrt(plotArea);
 // let plotsNumber = prompt ('Введите количество участков', '');
-// let companibleFencesNumber = --plotsNumber;
+// let companibleFencesNumber = plotsNumber -1;
 // let sidesNumber =4;
 // let fenceLenght= (plotSideLenght*sidesNumber*plotsNumber)-(companibleFencesNumber*plotSideLenght);
 // alert(`Длина забора равна - ${fenceLenght}`);
