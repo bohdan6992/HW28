@@ -1,17 +1,11 @@
+let simpleNumBool;
+for (let i = 1; i < 10000; i++) {
+  simpleNumBool = false;
 
-//______________#1_________________
-for(i=2; i<=14; i++){
-  let num = i%2;
-  if(num==0){
-    console.log(i);
-  }
+  for (let j = 2; j < i; j++) {
+    if (i % j != 0 && (i+1)%8 == 0 ){
+      simpleNumBool = true;
+    };
+  };
+  if (simpleNumBool) console.log( i+1 );
 }
-for(i=33; i<=45; i++){
-  let num = i%2;
-  if(num!=0){
-    console.log(i);
-  }
-}
-
-
-
