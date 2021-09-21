@@ -62,3 +62,19 @@
 //   arrStrs2[i]=arrStrs1[i] + arrStrs1[limit - (i+1)]
 // }
 // console.log(arrStrs2);
+
+// //___________________#6_______________________+
+// const arrStrs1 =['a', 'b', 'c', 'd'];
+// let limit = arrStrs1.length;
+
+// console.log(arrStrs1);
+
+// for (let i=0; i<limit; i++){
+//   arrStrs1[i]=(limit - i+1)**2
+//   if (i % 2 ==0){
+//         arrStrs1[i]=arrStrs1[i]
+//       }else{
+//         arrStrs1[i]=-arrStrs1[i]
+//       }
+// }
+// console.log(arrStrs1);
