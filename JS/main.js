@@ -1,80 +1,60 @@
-// //___________________#1_______________________+
-// const arrStrs1 =['a', 'b', 'c', 'd'];
-// let limit = arrStrs1.length;
-// console.log(arrStrs1);
 
-// const arrStrs2 =[];
+// //___________________1_____________________________
+// const arr1 = [56, 6, 3, 88, 23, -11];
 
-// for (let i=0; i<limit; i++){
-//   if (i % 2 ==0){
-//     arrStrs2[i]=arrStrs1[3]
-//   }else{
-//     arrStrs2[i]=arrStrs1[0]
+
+// const castlingItems = (arrIndex1, arrIndex2) => {
+//   let limit = arr1.length;
+//   const arr2 = [];
+//   console.log(`Inlet array: [${arr1}]`);
+
+//   for (let i=0; i<limit; i++){
+//     arr2[i] = arr1[i];
 //   }
-// }
-// console.log(arrStrs2);
 
-// //___________________#2_______________________+
-// const arrStrs1 =['a', 'b', 'c', 'd'];
-// let limit = arrStrs1.length;
-// console.log(arrStrs1);
+//   if (arrIndex1 < limit && arrIndex2 < limit){
+//     arr2[arrIndex1] = arr1[arrIndex2];
+//     arr2[arrIndex2] = arr1[arrIndex1];
+//     console.log(`Resultative array: [${arr2}]`);
+//   }
+//   else{
+//     console.log(`Sorry, but the indexes are outside the array`);
+//   }
+// };
 
-// const arrStrs2 =[];
+// castlingItems(4, 3);
 
-// for (let i=0; i<limit; i++){
-//   arrStrs2[i]=arrStrs1[limit - (i+1)]
-// }
-// console.log(arrStrs2);
 
-// //___________________#3_______________________+
-// const arrStrs1 =['a', 'b', 'a', 'b'];
-// let limit = arrStrs1.length;
-// console.log(arrStrs1);
+// //___________________2_____________________________
+// const arr1 = [56, 6, 3, 88, 23, -11];
 
-// for (let i=0; i<limit; i++){
-//   if (i!=3){
-//      arrStrs1[i]=arrStrs1[(i+1)]
-//   }else{
-//      arrStrs1[i]=arrStrs1[1]
-//   }  
-// }
-// console.log(arrStrs1);
+// const shiftItem = (arrIndex, direction) => {
+//   let limit = arr1.length;
+//   console.log(`Inlet array: [${arr1}]`);
+//   const arr2 = [];
 
-// //___________________#4_______________________+
-// const arrStrs1 =['a', 'b', 'c', 'd'];
-// let limit = arrStrs1.length;
-// console.log(arrStrs1);
-// const arrStrs2 =[];
+//   for (let i = 0; i < limit; i++){
+//     arr2[i] = arr1[i];
+    
+//   }
 
-// for (let i=0; i<limit; i++){
-//   arrStrs2[i]=arrStrs1[i]+(i+1)
-// }
-// console.log(arrStrs2);
+//   if (direction == 'right' && arrIndex < limit - 1){
+//     arr2[arrIndex + 1] = arr1[arrIndex];
+//     arr2[arrIndex] = arr1[arrIndex + 1];
+//     console.log(`Resultative array: [${arr2}]`);
+//   }
+//   if (direction == 'left' && arrIndex < limit - 1 && arrIndex > 0){
+//     arr2[arrIndex] = arr1[arrIndex + 1];
+//     arr2[arrIndex + 1] = arr1[arrIndex];
+//     console.log(`Resultative array: [${arr2}]`);
+//   }
+//   if (arrIndex > limit){
+//     console.log(`Sorry, but the index ${arrIndex} is outside the array`);
+//   }
+//   if (direction != 'right' && direction != 'left'){
+//     console.log(`Sorry, but you can only select "right" or "left"`);
+//   }
+// };
 
-// //___________________#5_______________________+
-// const arrStrs1 =['a', 'b', 'c', 'd'];
-// let limit = arrStrs1.length;
-// console.log(arrStrs1);
+// shiftItem(2, 'left');
 
-// const arrStrs2 =[];
-
-// for (let i=0; i<limit; i++){
-//   arrStrs2[i]=arrStrs1[i] + arrStrs1[limit - (i+1)]
-// }
-// console.log(arrStrs2);
-
-// //___________________#6_______________________+
-// const arrStrs1 =['a', 'b', 'c', 'd'];
-// let limit = arrStrs1.length;
-
-// console.log(arrStrs1);
-
-// for (let i=0; i<limit; i++){
-//   arrStrs1[i]=(limit - i+1)**2
-//   if (i % 2 ==0){
-//         arrStrs1[i]=arrStrs1[i]
-//       }else{
-//         arrStrs1[i]=-arrStrs1[i]
-//       }
-// }
-// console.log(arrStrs1);
