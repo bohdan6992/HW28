@@ -3,17 +3,17 @@ const arr2 = [];
 let limit = 5;
 
 do {
-  var num1 = parseInt(prompt('Enter first number, please'));
-  var num2 = parseInt(prompt('Enter second number, please'));
+  let num1 = parseInt(prompt('Enter first number, please'));
+  let num2 = parseInt(prompt('Enter second number, please'));
 
-  var sum = num1 + num2;
+  let sum = num1 + num2;
   
   if (sum %2 == 0){
     arr1.push(sum);
   }else{
     arr2.push(sum);
   }
-  
+
 } while (arr1.length > 0 && arr1.length < limit || arr2.length > 0 && arr2.length < limit);
 
 if (arr1.length > arr2.length){
