@@ -1,0 +1,35 @@
+.btn1{
+  width: 200px;
+  height: 20px;
+  background-color: yellow;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 1px;
+}
+
+.btn2{
+  width: 200px;
+  height: 20px;
+  background-color: orange;
+  margin-bottom: 5px;
+}
+
+.wrapper{
+  width: 410px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.divYes{
+  border: 1px solid black;
+  height: 100px;
+  width: 200px;
+  background-color: yellow;
+}
+
+.divNo{
+  border: 1px solid black;
+  height: 100px;
+  width: 200px;
+  background-color: orange;
+}

@@ -1,23 +1,39 @@
-const arr1 = [];
-const arr2 = [];
-let limit = 5;
+const btn1 = document.querySelector('.btn1'); 
+const btn2 = document.querySelector('.btn2'); 
+const divYes = document.querySelector('.divYes'); 
+const divNo = document.querySelector('.divNo'); 
 
-do {
-  let num1 = parseInt(prompt('Enter first number, please'));
-  let num2 = parseInt(prompt('Enter second number, please'));
 
-  let sum = num1 + num2;
-  
-  if (sum %2 == 0){
-    arr1.push(sum);
-  }else{
-    arr2.push(sum);
-  }
+const clickerCountFunc = (btn, word, div, c) => {
+  c = 0;
+  btn.addEventListener('click', () => {
+   c++;
+   // console.log(`number of ${word} clicks ${c}`);
+   div.innerHTML = `
+   <div class="${word}_count">
+     >>> Number of clicks - ${c} <<<
+   </div>
+   `;
+   const co1 = document.querySelector('.YES_count').innerText; 
+   const co2 = document.querySelector('.NO_count').innerText; 
+   console.log(co1);
 
-} while (arr1.length > 0 && arr1.length < limit || arr2.length > 0 && arr2.length < limit);
+   if(co1 > co2){
+    divYes.style.background = 'blue';
+    divNo.style.background = 'orange';
+   }else if(co1 < co2){
+    divNo.style.background = 'blue';
+    divYes.style.background = 'yellow';
+   }else{
+    divNo.style.background = 'aqua';
+    divYes.style.background = 'aqua';
+   }
+  });
+};
 
-if (arr1.length > arr2.length){
-  alert(`First array win!!! Array numbers:[${arr1}]`)
-}else{
-  alert(`Second array win!!! Array numbers:[${arr2}]`)
-}
+clickerCountFunc(btn1, 'YES', divYes, 'count1');
+clickerCountFunc(btn2, 'NO', divNo, 'count2');
+
+
+
+
