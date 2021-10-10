@@ -1,39 +1,21 @@
-const btn1 = document.querySelector('.btn1'); 
-const btn2 = document.querySelector('.btn2'); 
-const divYes = document.querySelector('.divYes'); 
-const divNo = document.querySelector('.divNo'); 
+const btn = document.querySelector('.search_btn');
+const main = document.querySelector('.main');
 
-
-const clickerCountFunc = (btn, word, div, c) => {
-  c = 0;
-  btn.addEventListener('click', () => {
-   c++;
-   // console.log(`number of ${word} clicks ${c}`);
-   div.innerHTML = `
-   <div class="${word}_count">
-     >>> Number of clicks - ${c} <<<
-   </div>
-   `;
-   const co1 = document.querySelector('.YES_count').innerText; 
-   const co2 = document.querySelector('.NO_count').innerText; 
-   console.log(co1);
-
-   if(co1 > co2){
-    divYes.style.background = 'blue';
-    divNo.style.background = 'orange';
-   }else if(co1 < co2){
-    divNo.style.background = 'blue';
-    divYes.style.background = 'yellow';
-   }else{
-    divNo.style.background = 'aqua';
-    divYes.style.background = 'aqua';
-   }
-  });
+const generateBoxes = () => {
+  const text = document.querySelector('.input');
+  const tempArr = text.value.split(' ')
+  let tempStr = '';
+  let longest = '';
+  for(let i = 0; i < tempArr.length; i++){
+    tempStr = `
+    ${tempStr}
+    <input class="out" placeholder='${tempArr[i]}'>`
+    if (tempArr[i].length > longest.length){
+      longest = tempArr[i];
+    }
+  };
+  main.innerHTML = tempStr
+  console.log(`The longest word: '${longest}'`);
 };
 
-clickerCountFunc(btn1, 'YES', divYes, 'count1');
-clickerCountFunc(btn2, 'NO', divNo, 'count2');
-
-
-
-
+btn.addEventListener('click', generateBoxes);
