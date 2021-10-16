@@ -1,67 +1,49 @@
-const btnLeft = document.querySelector('.left')
-const btnRight = document.querySelector('.right')
-const btnBack = document.querySelector('.back')
-const btnForward = document.querySelector('.forward')
-const box = document.querySelector('.box')
+
+const main = document.querySelector('.timer__main-clock')
+const btn = document.querySelector('.play-btn')
+let time = document.querySelector('.time-inp');
 
 
-btnLeft.addEventListener('mousedown', () => {
-  box.classList.toggle('moveLeft')
-});
-btnLeft.addEventListener('mouseup', () => {
-  box.classList.remove('moveLeft')
-});
+btn.addEventListener('click', () => {
+  time = document.querySelector('.time-inp').value;
 
-btnRight.addEventListener('mousedown', () => {
-  box.classList.toggle('moveRight')
-});
-btnRight.addEventListener('mouseup', () => {
-  box.classList.remove('moveRight')
-});
+  let dateInp = time.split(':');
 
-btnBack.addEventListener('mousedown', () => {
-  box.classList.toggle('moveBack')
-});
-btnBack.addEventListener('mouseup', () => {
-  box.classList.remove('moveBack')
-});
+  let hoursInp = dateInp[0];
+  let minutesInp =  dateInp[1];
 
-btnForward.addEventListener('mousedown', () => {
-  box.classList.toggle('moveForward')
-});
-btnForward.addEventListener('mouseup', () => {
-  box.classList.remove('moveForward')
-});
+  hoursInp  = Number(hoursInp );
+  minutesInp  = Number(minutesInp);
 
+  const dateNow = new Date();
 
-document.addEventListener('keydown', (event) => {
-  if (event.key === ' '){
-    box.classList.add('magnif')
-  }
-});
-document.addEventListener('keyup', (event) => {
-  if (event.key === ' '){
-    box.classList.remove('magnif')
-  }
-});
+  let hoursNow = dateNow.getHours();
+  let minutesNow =  dateNow.getMinutes();
 
-const keyClickFunc = (key1, key2, way) => {
-  document.addEventListener('keydown', (event) => {
-    if (event.key === `${key1}`|| event.code === `${key2}`){
-      box.classList.toggle(`${way}`)
-    };
-  });
-  document.addEventListener('keyup', (event) => {
-    if (event.key === `${key1}`|| event.code === `${key2}`){
-      box.classList.remove(`${way}`)
+  let hoursResult = hoursInp - hoursNow;
+  let minuteResult =  minutesInp - minutesNow;
+  let secondsResult = 0;
+
+  const showSecond = () => {
+
+    let formattedTime = hoursResult + ':' + minuteResult + ':' + secondsResult;
+    main.innerText = formattedTime;
+    secondsResult--;
+    if(secondsResult <= 0 && minuteResult > 0){
+      minuteResult--;
+      secondsResult = 60;
+    }else if(minuteResult <= 0 && hoursResult > 0){
+      hoursResult--;
+      minuteResult = 60;
+    }else if(hoursResult <= 0 && minuteResult <= 0 && secondsResult <= 0){
+      main.innerText = 'End';
+      clearInterval(timer);
     }
-  });
-};
+  };
+  const timer = setInterval(showSecond, 1000);
+})
 
-keyClickFunc('w', 'ArrowUp', 'moveForward');
-keyClickFunc('s', 'ArrowDown', 'moveBack');
-keyClickFunc('a', 'ArrowLeft', 'moveLeft');
-keyClickFunc('d', 'ArrowRight', 'moveRight');
+
 
 
 
